@@ -1,0 +1,9 @@
+int LDR=A0 ;
+void setup() {
+ Serial.begin(9600); //seri monitöre yazdırmak için veri haberleşmeyi başlattık.//seri iletişimin hızı
+}
+
+void loop() {
+Serial.println(analogRead(A0)); //analog girişi A0 yaptık.bu değeri okuduk.ve ekrana yazdırdık.
+delay(10); 
+}
