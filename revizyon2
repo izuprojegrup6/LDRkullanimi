@@ -1,12 +1,18 @@
 int R=270;
-
+int LDR_deger;
+char a[20]={'B','A','S','L','A'} ;
 void setup() {
- Serial.begin(9600); 
+  Serial.begin(9600); 
+  Serial.println("Program basladi ");
+  
 }
 
 void loop() {
-Serial.println("Program basladi");
-int LDR_deger=analogRead(A0);
+  int T=Serial.available();
+  if(T!=0){  
+    while(char a=Serial.read()){
+  
+LDR_deger=analogRead(A0);
 
 float ldrgerilimi=LDR_deger*(5/1023.0); 
 Serial.print("LDR Gerilimi : ");
@@ -14,9 +20,11 @@ Serial.print(ldrgerilimi);
 Serial.print(" V");
 
 float ldrdirenci=R/ldrgerilimi*((5.0-ldrgerilimi)/1000);
-Serial.print(",LDR Direnci : ");
+Serial.print(" , LDR Direnci : ");
 Serial.print(ldrdirenci);
-Serial.print(" ohm");
+Serial.println(" ohm");
 
 delay(500);
+    }
+  }
 }
