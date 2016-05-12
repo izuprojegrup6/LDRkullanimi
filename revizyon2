@@ -13,7 +13,7 @@ Serial.print("LDR Gerilimi : ");
 Serial.print(ldrgerilimi);
 Serial.print(" V");
 
-float ldrdirenci=R/ldrgerilimi*((5.0-ldrgerilimi)/270);
+float ldrdirenci=R/ldrgerilimi*((5.0-ldrgerilimi)/1000);
 Serial.print(",LDR Direnci : ");
 Serial.print(ldrdirenci);
 Serial.print(" ohm");
