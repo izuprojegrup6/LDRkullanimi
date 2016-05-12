@@ -1,0 +1,22 @@
+int R=270;
+
+void setup() {
+ Serial.begin(9600); 
+}
+
+void loop() {
+Serial.println("Program başladı");
+int LDR_deger=analogRead(A0);
+
+float ldrgerilimi=LDR_deger*(5/1023.0); 
+Serial.print("LDR Gerilimi : ");
+Serial.print(ldrgerilimi);
+Serial.print(" V");
+
+float ldrdirenci=R/ldrgerilimi*((5.0-ldrgerilimi)/270);
+Serial.print(",LDR Direnci : ");
+Serial.print(ldrdirenci);
+Serial.print(" ohm");
+
+delay(500);
+}
