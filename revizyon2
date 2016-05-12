@@ -5,7 +5,7 @@ void setup() {
 }
 
 void loop() {
-Serial.println("Program başladı");
+Serial.println("Program basladi");
 int LDR_deger=analogRead(A0);
 
 float ldrgerilimi=LDR_deger*(5/1023.0); 
