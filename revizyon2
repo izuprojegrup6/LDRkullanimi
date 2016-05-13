@@ -1,6 +1,6 @@
 int R=270;
 int LDR_deger;
-char a[20]={'B','A','S','L','A'} ;
+
 void setup() {
   Serial.begin(9600); 
   Serial.println("Program basladi ");
@@ -10,7 +10,8 @@ void setup() {
 void loop() {
   int T=Serial.available();
   if(T!=0){  
-    while(char a=Serial.read()){
+  String a=Serial.readString();
+   while(a=="BASLA"){
   
 LDR_deger=analogRead(A0);
 
